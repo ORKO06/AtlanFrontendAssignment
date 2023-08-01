@@ -1,0 +1,1 @@
+export const queryList = ["Select * from Customers","Select * from Orders","Select * from Products"];
