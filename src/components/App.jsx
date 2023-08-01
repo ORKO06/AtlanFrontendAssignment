@@ -1,8 +1,9 @@
+import Navbar from "./shared/Navbar/Navbar";
 
 const App = () => {
   return (
     <div>
-      React-SQL-App
+      <Navbar />
     </div>
   )
 }
