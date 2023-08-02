@@ -2,6 +2,10 @@
     React SQL Editor - Atlan Frontend Engineering Internship Assignment
 </h1>
 
+<h3 align="center">
+    Built using React and Tailwind
+</h1>
+
 ## Introduction
 
 The given application is developed as a task for Atlan. It enables users to run SQL queries in an online editor, and analyze the output obtained as a result of running the queries.
