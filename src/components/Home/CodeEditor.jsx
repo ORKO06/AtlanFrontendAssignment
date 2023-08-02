@@ -10,10 +10,9 @@ const CodeEditor = () => {
     setQuery(value);
   }, []);
 
-  console.log(query);
   return (
-    <div className=" bg-[#6D95E0] rounded p-6 flex-grow">
-         <h2 className="font-semibold text-2xl mb-3">Editor</h2>
+    <div className={codeEditorContainerClassName}>
+         <h2 className={codeEditorTitle}>Editor</h2>
         <ReactCodeMirror
           value={query}
           height="200px"
@@ -24,5 +23,8 @@ const CodeEditor = () => {
     </div>
   )
 }
+
+const codeEditorContainerClassName = 'bg-[#6D95E0] rounded p-6 flex-grow';
+const codeEditorTitle = 'font-semibold text-2xl mb-3';
 
 export default CodeEditor

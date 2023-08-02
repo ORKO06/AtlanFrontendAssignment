@@ -9,10 +9,8 @@ export const QueryContext = createContext(defaultV);
 
   const QueryContextProvider = ({ children }) => {
    const [data,setData] = useState([]);
-   const [query,setQuery] = useState("Select * from Customers");
+   const [query,setQuery] = useState("Select * from Customers;");
     
-    
-  
     const value = {
       data,
       query,

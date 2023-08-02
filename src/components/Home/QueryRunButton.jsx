@@ -30,8 +30,10 @@ const QueryRunButton = () => {
   }
   
   return (
-    <button onClick={OnClickHandler} className='bg-green-400 px-6 py-2 float-right rounded my-4 text-xl'>Run</button>
+    <button onClick={OnClickHandler} className={QueryButtonClassName}>Run</button>
   )
 }
+
+const QueryButtonClassName = "bg-green-400 px-6 py-2 sm:float-right rounded my-4 text-xl"
 
 export default QueryRunButton

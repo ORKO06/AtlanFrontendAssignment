@@ -8,15 +8,18 @@ const App = () => {
   return (
     <QueryContextProvider>
 			<Navbar />
-			<div className='flex gap-10 mx-20 max-w-7xl my-16' >
+			<div className={QueryContainerClassName} >
 				<SideBar />
 				<CodeEditor />
 			</div>
-			<div className='mx-20 max-w-7xl my-16' >
+			<div className={OutputTableContainerClassName} >
 				<OutputTable />
 			</div>
 		</QueryContextProvider>
   )
 }
+
+const QueryContainerClassName = "sm:flex gap-10 mx-6 sm:mx-20 max-w-7xl my-16";
+const OutputTableContainerClassName = "mx-6 sm:mx-20 max-w-7xl my-16"
 
 export default App;

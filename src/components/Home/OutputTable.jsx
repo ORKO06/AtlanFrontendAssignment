@@ -8,16 +8,17 @@ import { QueryContext } from "../../utils/QueryContext";
 const OutputTable = () => {
   const {data} = useContext(QueryContext);
   const headers = data.length > 0 ? Object.keys(data[0]) : [];
-  console.log(data);
   const { CSVDownloader } = useCSVDownloader();
   
   return (
       <>
-      <div className='flex justify-between items-center' >
+      <div className={tableContainerClassName}>
         <h2 className={tableTitleClassName}>Output</h2>
         <CSVDownloader
-          filename={'filename'}
+          filename={'data'}
           data={data}   
+          bom={true}
+          type="link"
         >
           <button disabled={!data.length} className={tableButtonClassName}>Export Data</button>
         </CSVDownloader>
@@ -53,6 +54,8 @@ const OutputTable = () => {
     </>
   );
 };
+
+const tableContainerClassName = 'flex justify-between items-center';
 
 const tableClassName = 'border-collapse w-full rounded-xl overflow-hidden shadow-[40px 90px 55px -20px rgba(155, 184, 243, 0.2)]';
 
